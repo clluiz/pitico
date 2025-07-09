@@ -1,0 +1,43 @@
+{
+	"type": "module",
+	"dependencies": {
+		"@fastify/autoload": "^6.1.0",
+		"@fastify/cors": "^11.0.1",
+		"@fastify/env": "^5.0.2",
+		"@fastify/formbody": "^8.0.2",
+		"@fastify/swagger": "^9.4.2",
+		"@fastify/swagger-ui": "^5.2.2",
+		"date-fns": "^4.1.0",
+		"dotenv": "^17.1.0",
+		"fastify": "^5.2.1",
+		"fastify-plugin": "^5.0.1",
+		"fastify-user-agent": "^2.0.1",
+		"knex": "^3.1.0",
+		"pg": "^8.16.3",
+		"zod": "^3.25.67"
+	},
+	"scripts": {
+		"dev": "tsx watch src/server.ts",
+		"start": "node dist/server.js",
+		"build": "tsc",
+		"lint": "eslint src/**/*.{js,ts}",
+		"format": "prettier --write ./src --ignore-path .prettierignore"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.21.0",
+		"@types/fastify-user-agent": "^2.0.0",
+		"@types/node": "^22.13.5",
+		"eslint": "^9.21.0",
+		"eslint-config-prettier": "^10.0.1",
+		"eslint-plugin-prettier": "^5.2.3",
+		"globals": "^16.0.0",
+		"lefthook": "^1.11.0",
+		"nodemon": "^3.1.9",
+		"prettier": "^3.5.2",
+		"tap": "^21.1.0",
+		"ts-node": "^10.9.2",
+		"tsx": "^4.19.3",
+		"typescript": "^5.7.3",
+		"typescript-eslint": "^8.25.0"
+	}
+}
