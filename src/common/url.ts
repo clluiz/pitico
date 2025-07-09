@@ -66,13 +66,13 @@ const chars = [
 export function encodeInBase62(number: number): string {
   if (number === 0) return "0";
 
-  let foo: number = number;
+  let result: number = number;
   let encodedString: string = "";
 
-  while (foo > 0) {
-    let remainder = foo % 62;
+  while (result > 0) {
+    const remainder = result % 62;
     encodedString = chars[remainder] + encodedString;
-    foo = Math.trunc(foo / 62);
+    result = Math.trunc(result / 62);
   }
 
   return encodedString;

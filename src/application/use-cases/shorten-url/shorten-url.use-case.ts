@@ -1,11 +1,6 @@
 import { ShortenUrlInputDto, ShortenUrlOutputDto } from "./shorten-url.dto.js";
-import { Url } from "../../../domain/entities/url.entity.js";
-import { UrlRepository } from "../../../domain/repositories/url.repository.js";
-import { KnexUrlRepository } from "../../../infrastructure/repositories/knex-url.repository.js";
 import { encodeInBase62 } from "../../../common/url.js";
 import { db } from "../../../infrastructure/db/index.js";
-
-const urlRepository: UrlRepository = new KnexUrlRepository();
 
 export async function execute(
   input: ShortenUrlInputDto,
@@ -32,8 +27,8 @@ export async function execute(
   } catch (error) {
     await trx.rollback();
     throw error;
-  } 
-  
+  }
+
   return {
     id: urlId,
     originalUrl,

@@ -9,7 +9,7 @@ export const createUrlSchema = {
   querystring: {
     type: "object",
     properties: {
-      value: { type: 'integer' }
+      value: { type: "integer" },
     },
   },
   response: {
