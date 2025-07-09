@@ -4,6 +4,6 @@ export interface ShortenUrlInputDto {
 
 export interface ShortenUrlOutputDto {
   id: number;
-  shortCode: string;
+  shortUrl: string;
   originalUrl: string;
 }

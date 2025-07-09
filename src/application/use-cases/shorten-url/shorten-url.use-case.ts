@@ -32,6 +32,6 @@ export async function execute(
   return {
     id: urlId,
     originalUrl,
-    shortCode,
+    shortUrl: `http://localhost:5000/${shortCode}`,
   };
 }
