@@ -9,8 +9,8 @@ export const redirect = async (
 
   const result = await db("urls").where("short_code", "=", code);
 
-  if(!result) {
-    return reply.code(404).send({ message: "URL inválida" })
+  if (!result) {
+    return reply.code(404).send({ message: "URL inválida" });
   }
 
   const originalUrl: string = result[0].original_url;
