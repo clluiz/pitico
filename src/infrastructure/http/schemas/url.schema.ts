@@ -3,7 +3,11 @@ export const createUrlSchema = {
     type: "object",
     required: ["url"],
     properties: {
-      url: { type: "string" },
+      url: {
+        type: "string",
+        pattern:
+          "^(https?:\\/\\/)?([\\w.-]+)\\.([a-z\\.]{2,6})([\\/\\w\\.-]*)*\\/?$",
+      },
     },
   },
   querystring: {
