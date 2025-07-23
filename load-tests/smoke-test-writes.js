@@ -16,8 +16,6 @@ export default () => {
   const params = {
     headers: {
       'Content-Type': 'application/json',
-      // You can add other headers here, like Authorization tokens.
-      // 'Authorization': 'Bearer YOUR_API_TOKEN',
     },
   };
   
