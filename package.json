@@ -21,10 +21,12 @@
 		"start": "node dist/server.js",
 		"build": "tsc",
 		"lint": "eslint src/**/*.{js,ts}",
-		"format": "prettier --write ./src --ignore-path .prettierignore"
+		"format": "prettier --write ./src --ignore-path .prettierignore",
+		"test": "DEBUG=testcontainers* node ./load-tests/smoke-test-url-enconding.js"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.21.0",
+		"@testcontainers/postgresql": "^11.4.0",
 		"@types/fastify-user-agent": "^2.0.0",
 		"@types/node": "^22.13.5",
 		"eslint": "^9.21.0",
@@ -35,6 +37,7 @@
 		"nodemon": "^3.1.9",
 		"prettier": "^3.5.2",
 		"tap": "^21.1.0",
+		"testcontainers": "^11.4.0",
 		"ts-node": "^10.9.2",
 		"tsx": "^4.19.3",
 		"typescript": "^5.7.3",
